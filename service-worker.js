@@ -1,8 +1,12 @@
+---
+permalink: service-worker.js
+---
+
 "use strict";
 
 console.log('WORKER: executing.');
 
-var version = 'v1.0.1';
+var version = 'v1.0.2';
 var pathsToCache = [
   '/',
   '/lang/pt_br/',
