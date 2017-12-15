@@ -42,6 +42,11 @@ layout: default
             <li><kbd>tx</kbd> - {{ page.cursorMovement.commands.tx }}</li>
             <li><kbd>Fx</kbd> - {{ page.cursorMovement.commands.Fx }}</li>
             <li><kbd>Tx</kbd> - {{ page.cursorMovement.commands.Tx }}</li>
+          </ul>
+        </div>
+        <div class="grid-lg-1-3">
+          <h2>{{ page.cursorMovement.title }}</h2>
+          <ul>
             <li><kbd>;</kbd> - {{ page.cursorMovement.commands.semicolon }}</li>
             <li><kbd>,</kbd> - {{ page.cursorMovement.commands.comma }}</li>
             <li><kbd>}</kbd> - {{ page.cursorMovement.commands.closeCurlyBrace }}</li>
@@ -66,8 +71,6 @@ layout: default
             <li><kbd>ea</kbd> - {{ page.insertMode.commands.ea }}</li>
             <li><kbd>Esc</kbd> - {{ page.insertMode.commands.Esc }}</li>
           </ul>
-        </div>
-        <div class="grid-lg-1-3">
           <h2>{{ page.editing.title }}</h2>
           <ul>
             <li><kbd>r</kbd> - {{ page.editing.commands.r }}</li>
@@ -83,6 +86,8 @@ layout: default
             <li><kbd>Ctrl</kbd> + <kbd>r</kbd> - {{ page.editing.commands.CtrlPlusr }}</li>
             <li><kbd>.</kbd> - {{ page.editing.commands.dot }}</li>
           </ul>
+        </div>
+        <div class="grid-lg-1-3">
           <h2>{{ page.markingText.title }}</h2>
           <ul>
             <li><kbd>v</kbd> - {{ page.markingText.commands.v }}</li>
@@ -124,6 +129,17 @@ layout: default
             <li><kbd>`a</kbd> - {{ page.marks.commands.jumpPositionA }}</li>
             <li><kbd>y`a</kbd> - {{ page.marks.commands.yankToMarkA }}</li>
           </ul>
+          <h2>{{ page.exiting.title }}</h2>
+          <ul>
+            <li><kbd>:w</kbd> - {{ page.exiting.commands.colonw }}</li>
+            <li><kbd>:w !sudo tee %</kbd> - {{ page.exiting.commands.colonwsudo }}</li>
+            <li><kbd>:wq</kbd> or <kbd>:x</kbd> or <kbd>ZZ</kbd> - {{ page.exiting.commands.colonwq }}</li>
+            <li><kbd>:q</kbd> - {{ page.exiting.commands.colonq }}</li>
+            <li><kbd>:q!</kbd> or <kbd>ZQ</kbd> - {{ page.exiting.commands.colonqbang }}</li>
+            <li><kbd>:wqa</kbd> - {{ page.exiting.commands.colonwqa }}</li>
+          </ul>
+        </div>
+        <div class="grid-lg-1-3">
           <h2>{{ page.macros.title }}</h2>
           <ul>
             <li><kbd>qa</kbd> - {{ page.macros.commands.recordA }}</li>
@@ -131,8 +147,6 @@ layout: default
             <li><kbd>@a</kbd> - {{ page.macros.commands.runA }}</li>
             <li><kbd>@@</kbd> - {{ page.macros.commands.rerun }}</li>
           </ul>
-        </div>
-        <div class="grid-lg-1-3">
           <h2>{{ page.cutAndPaste.title }}</h2>
           <ul>
             <li><kbd>yy</kbd> - {{ page.cutAndPaste.commands.yy }}</li>
@@ -147,15 +161,6 @@ layout: default
             <li><kbd>D</kbd> - {{ page.cutAndPaste.commands.D }}</li>
             <li><kbd>d$</kbd> - {{ page.cutAndPaste.commands.dDollar }}</li>
             <li><kbd>x</kbd> - {{ page.cutAndPaste.commands.x }}</li>
-          </ul>
-          <h2>{{ page.exiting.title }}</h2>
-          <ul>
-            <li><kbd>:w</kbd> - {{ page.exiting.commands.colonw }}</li>
-            <li><kbd>:w !sudo tee %</kbd> - {{ page.exiting.commands.colonwsudo }}</li>
-            <li><kbd>:wq</kbd> or <kbd>:x</kbd> or <kbd>ZZ</kbd> - {{ page.exiting.commands.colonwq }}</li>
-            <li><kbd>:q</kbd> - {{ page.exiting.commands.colonq }}</li>
-            <li><kbd>:q!</kbd> or <kbd>ZQ</kbd> - {{ page.exiting.commands.colonqbang }}</li>
-            <li><kbd>:wqa</kbd> - {{ page.exiting.commands.colonwqa }}</li>
           </ul>
           <h2>{{ page.searchAndReplace.title }}</h2>
           <ul>
@@ -173,20 +178,11 @@ layout: default
           <h2>{{ page.searchMultipleFiles.title }}</h2>
           <ul>
             <li><kbd>:vimgrep /pattern/ {file}</kbd> - {{ page.searchMultipleFiles.commands.colonvimgrep}}</li>
-          </ul>
-          <div class="well">
-            e.g.
-            <kbd>:vimgrep /foo/ **/*</kbd>
-          </div>
-          <ul>
             <li><kbd>:cn</kbd> - {{ page.searchMultipleFiles.commands.coloncn }}</li>
             <li><kbd>:cp</kbd> - {{ page.searchMultipleFiles.commands.coloncp }}</li>
             <li><kbd>:copen</kbd> - {{ page.searchMultipleFiles.commands.coloncopen }}</li>
           </ul>
         </div>
-      </div>
-      <!-- end grid-block -->
-      <div class="grid-block">
         <div class="grid-lg-1-3">
           <h2>{{ page.workingWithMultipleFiles.title }}</h2>
           <ul>
@@ -206,8 +202,6 @@ layout: default
             <li><kbd>Ctrl</kbd> + <kbd>wj</kbd> - {{ page.workingWithMultipleFiles.commands.ctrlPluswj }}</li>
             <li><kbd>Ctrl</kbd> + <kbd>wk</kbd> - {{ page.workingWithMultipleFiles.commands.ctrlPluswk }}</li>
           </ul>
-        </div>
-        <div class="grid-lg-1-3">
           <h2>{{ page.tabs.title }}</h2>
           <ul>
             <li><kbd>:tabnew</kbd> or <kbd>:tabnew {{ page.words.file }}</kbd> - {{ page.tabs.commands.colonTabNew }}</li>
